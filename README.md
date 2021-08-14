@@ -18,6 +18,11 @@ After installation is done, you can check the version by using this command.
 ```
 git --versoin
 ```
+Now follow the command to configure your git with your github profile. 
+```
+git config --global user.name "rwiteshbera"
+git config --global user.email rwitesh@example.com
+```
 #### Initialize an empty Git repository
 ```
 git init
@@ -71,7 +76,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:rwiteshbera/Learn-Git-and-Github.git
+git remote add origin git@github.com:rwiteshbera/Git-and-Github.git
 git push -u origin main
 ```
 #### Git Push
@@ -92,3 +97,8 @@ git branch
 ```
 git checkout <branch name>
 ```
+#### Git clone
+```
+git clone <url of the repository>
+```
+It will create a copy of remote repository in your local system.
