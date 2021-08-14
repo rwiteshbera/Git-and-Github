@@ -58,8 +58,37 @@ git reset <hash id>
 2. `git reset --mixed <hash id>` - Reset the index but not the local files. Changed files are preserved but make them unstaged. 
 3. `git reset --hard <hash id>` Reset the index and working tree both.
 
-#### Return to old Git commit
+#### Return to old commit
 ```
 git checkout <hash id>
 ```
 It will return to a old commit and change the files to that specific commit.
+
+#### Push code in a new repository.
+First Create a repository in Github by filling up the required details.
+```
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:rwiteshbera/Learn-Git-and-Github.git
+git push -u origin main
+```
+#### Git Push
+```
+git push -u origin <branch name>
+```
+It will upload local repository content to a remote github repository
+
+#### Create branch in repository
+```
+git branch <branch name>
+```
+#### Show all branches
+```
+git branch
+```
+#### Switch to another branch
+```
+git checkout <branch name>
+```
