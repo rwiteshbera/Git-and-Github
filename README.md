@@ -16,7 +16,7 @@ sudo apt-get install git
 
 After installation is done, you can check the version by using this command.
 ```
-git --versoin
+git --version
 ```
 Now follow the command to configure your git with your github profile. 
 ```
