@@ -21,7 +21,7 @@ git --version
 Now follow the command to configure your git with your github profile. 
 ```
 git config --global user.name "rwiteshbera"
-git config --global user.email rwitesh@example.com
+git config --global user.email rwiteshbera@gmail.com
 ```
 #### Initialize an empty Git repository
 ```
