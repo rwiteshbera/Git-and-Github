@@ -95,7 +95,7 @@ git checkout <hash id>
 ```
 It will return to a old commit and change the files to that specific commit.
 
-### Push code in a new repository.
+#### Push code in a new repository.
 First Create a repository in Github by filling up the required details.
 ```
 git init
