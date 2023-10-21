@@ -1,4 +1,5 @@
-## Git and Github
+
+# Git and Github
  Git is a version control system that allow us to collaborate with other developers. It helps a person to store, manage code and keep tracking changes made in the codebase of a project they are working on.
 
 Github is a web-base platform for code hosting. It helps you to work together with other people on various projects.
@@ -7,22 +8,47 @@ Github is a web-base platform for code hosting. It helps you to work together wi
 You can download and install **Git** from the official website. 
 Download Link: [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
-In Linux, you can install latest version of Git by using the following command.
-```
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt-get install git
-```
-
 After installation is done, you can check the version by using this command.
 ```
 git --version
 ```
-Now follow the command to configure your git with your github profile. 
+### Configure Git with Github 
+**Add GitHub username and email**
 ```
 git config --global user.name "rwiteshbera"
-git config --global user.email rwiteshbera@gmail.com
+git config --global user.email "rwiteshbera@gmail.com"
 ```
+
+**Add a new SSH key to your GitHub account**
+1. **Generate new SSH Key:**
+```bash
+ssh-keygen -t ed25519 -C "rwiteshbera@gmail.com"
+```
+2. **Start the SSH agent:**
+```bash
+ eval "$(ssh-agent -s)"
+```
+3. **Add SSH key to agent:**
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+4. **Copy the SSH key to clipboard:**
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+5. **Add the SSH key to your GitHub account:** 
+-   Go to your GitHub account settings.
+-   Click on **SSH and GPG keys**.
+-   Click **New SSH Key**.
+-   Paste the SSH key you copied from the clipboard into the provided field.
+-   Give your SSH key a descriptive title (e.g., "My Local Machine").
+-   Click **Add SSH Key** to save it to your GitHub account.
+
+Your Git configuration is now set up to work with your GitHub account, and you have added an SSH key for secure access.
+
+____
+### Commonly Used Git Commands
+
 #### Initialize an empty Git repository
 ```
 git init
@@ -69,7 +95,7 @@ git checkout <hash id>
 ```
 It will return to a old commit and change the files to that specific commit.
 
-#### Push code in a new repository.
+### Push code in a new repository.
 First Create a repository in Github by filling up the required details.
 ```
 git init
